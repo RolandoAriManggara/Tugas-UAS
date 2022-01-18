@@ -1,0 +1,34 @@
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                <div><button mat-raised-button color="primary">Tambah Data</button></div>
+                </div>
+                <div class="card-body">
+                    <table class="table table-head-fixed text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let currentDivisions of divisions; let i = index">
+                            <tr>
+                                <td>{{currentDivisions._id}}</td>
+                                <td>{{currentDivisions.name}}</td>
+                                <td>{{currentDivisions.description}}</td>
+                                <td><a href="/update/{{ currentDivisions._id }}}">
+                                    <button class="btn btn-secondary"><i class="far fa-edit nav-icon"></i></button>
+                                    </a>
+                                    <button class="btn btn-danger"><i class="nav-icon fas fa-trash-alt"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
